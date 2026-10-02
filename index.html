@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="كتابك — متجر كتب رقمية">
+<meta name="theme-color" content="#07101f">
+<title>كتابك — مكتبتك الرقمية</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">📚 كتابك</a>
+  <nav><a href="#books">المكتبة</a><a href="#payment">الدفع</a><a href="#account">حسابي</a><a href="/admin.html">الإدارة</a></nav>
+  <button id="authBtn" class="btn mini">دخول</button>
+</header>
+<main>
+<section class="hero wrap">
+  <span class="pill">مكتبة رقمية • شام كاش</span>
+  <h1>كتبك، في مكان واحد.</h1>
+  <p>تصفح الكتب المتاحة، أنشئ حسابًا خلال دقيقة، ثم أرسل طلب الشراء وإثبات التحويل عبر شام كاش.</p>
+  <div class="actions"><a class="btn" href="#books">تصفح المكتبة</a><a class="btn ghost" href="#payment">طريقة الدفع</a></div>
+</section>
+
+<section id="books" class="wrap">
+  <div class="section-head"><div><span class="eyebrow">المكتبة</span><h2>الكتب المتاحة</h2></div>
+  <div class="filters"><input id="search" class="input" placeholder="ابحث عن كتاب أو مؤلف"><select id="lang" class="input"><option value="">كل اللغات</option></select></div></div>
+  <div id="booksGrid" class="grid"></div>
+</section>
+
+<section id="payment" class="wrap">
+  <div class="panel">
+    <span class="eyebrow">شام كاش</span><h2>طريقة الدفع</h2>
+    <div class="payment-grid">
+      <div class="qr"><img src="/shamcash-qr.jpg" alt="QR شام كاش"><strong>امسح رمز QR من تطبيق شام كاش</strong></div>
+      <div>
+        <p>معرّف الاستقبال:</p><div class="wallet">d8dfa32ea57bd2c0c4f2babc8f97688c</div>
+        <div class="notice">لا ترسل كلمة مرور شام كاش أو رمز OTP إلى الموقع. بعد التحويل، احتفظ برقم العملية وأرسله في طلب الشراء.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="account" class="wrap">
+  <div class="panel account">
+    <div class="tabs"><button class="tab active" data-mode="register">تسجيل جديد</button><button class="tab" data-mode="login">دخول</button></div>
+    <form id="authForm">
+      <input id="name" class="input" placeholder="الاسم" required>
+      <input id="email" class="input" type="email" placeholder="البريد الإلكتروني" required>
+      <input id="password" class="input" type="password" minlength="8" placeholder="كلمة المرور (8 أحرف على الأقل)" required>
+      <button id="authSubmit" class="btn" type="submit">إنشاء الحساب</button>
+    </form>
+    <div id="authMsg"></div>
+    <div id="userBox" class="hidden"></div>
+  </div>
+</section>
+
+<section id="order" class="wrap hidden">
+  <div class="panel account">
+    <span class="eyebrow">طلب شراء</span><h2>إرسال إثبات الدفع</h2>
+    <form id="orderForm">
+      <input id="bookId" type="hidden">
+      <input id="bookName" class="input" readonly>
+      <input id="tx" class="input" placeholder="رقم عملية شام كاش" required>
+      <input id="proof" class="input" type="file" accept="image/*,.pdf">
+      <button class="btn" type="submit">إرسال الطلب للمراجعة</button>
+    </form>
+    <div id="orderMsg"></div>
+  </div>
+</section>
+</main>
+<footer>© كتابك — <a href="/terms.html">الشروط</a> · <a href="/privacy.html">الخصوصية</a> · <a href="/refund.html">الاسترداد</a></footer>
+<script src="/app.js" defer></script>
+</body></html>

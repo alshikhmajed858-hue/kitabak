@@ -1,0 +1,18 @@
+name = "kitabak"
+main = "worker.js"
+compatibility_date = "2026-10-02"
+
+[assets]
+directory = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kitabak-db"
+database_id = "PUT_D1_DATABASE_ID_HERE"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "kitabak-private"
+
+[vars]
+# Do not put ADMIN_KEY here. Use: wrangler secret put ADMIN_KEY

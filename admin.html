@@ -1,0 +1,7 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>كتابك — الإدارة</title><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="top"><a class="brand" href="/">📚 كتابك</a><nav><a href="/">الموقع</a></nav></header>
+<main class="wrap">
+<div class="panel"><h1>لوحة الإدارة</h1><p class="muted">أدخل مفتاح الإدارة. لا يتم تخزينه داخل الموقع.</p><div class="actions"><input id="key" class="input" type="password" placeholder="ADMIN_KEY"><button id="load" class="btn">فتح الطلبات</button></div><div id="adminMsg"></div></div>
+<div id="orders" class="panel hidden"><h2>الطلبات</h2><div id="orderList"></div></div>
+<div id="addBook" class="panel hidden"><h2>إضافة كتاب</h2><form id="bookForm" class="form"><input id="bt" class="input" placeholder="العنوان" required><input id="ba" class="input" placeholder="المؤلف"><input id="bl" class="input" placeholder="اللغة" required><input id="bp" class="input" type="number" min="0" placeholder="السعر بالليرة السورية" required><input id="bf" class="input" type="file" accept=".pdf,.epub" required><button class="btn">رفع الكتاب</button></form><div id="bookMsg"></div></div>
+</main><script src="/admin.js"></script></body></html>
